@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { map } from 'rxjs';
 
 @Component({
   selector: 'app-page-one',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   template: `
-    <p>page-one works!</p>
+    <p [routerLink]="'page-one'" routerLinkActive="router-link-active" >page-one works!</p>
 
     <div *ngFor="let user of users$ | async">
       <p>{{ user.name }}</p>
