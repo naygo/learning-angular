@@ -14,6 +14,8 @@ export class FormsTemplateComponent {
   userInfo: UserInfo = {
     name: '',
     email: '',
-    age: 12
-  }
+    age: 12,
+  };
+
+  search = '';
 }
