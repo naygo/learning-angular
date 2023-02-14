@@ -1,6 +1,7 @@
 import { inject, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthService } from './auth/auth.service';
+import { FormsTemplateComponent } from './forms-playground/template/forms-template.component';
 import { PageOneComponent } from './test-pages/page-one.component';
 import { PageThreeComponent } from './test-pages/page-three.component';
 import { PageTwoComponent } from './test-pages/page-two.component';
@@ -18,6 +19,10 @@ const routes: Routes = [
       { path: 'page-three', component: PageThreeComponent },
     ],
   },
+  {
+    path: 'forms',
+    component: FormsTemplateComponent,
+  }
 ];
 
 @NgModule({
