@@ -4,7 +4,7 @@
   {{ userInfo | json }}
 </p>
 
-<form [ngFormOptions]="{ updateOn: 'blur' }">
+<form #form="ngForm" [ngFormOptions]="{ updateOn: 'blur' }" (ngSubmit)="onSubmitForm(form)">
   <div>
     <label for="name">Name: </label>
     <input type="text" id="name" name="name" [(ngModel)]="userInfo.name" />

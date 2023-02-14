@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserInfo } from './info';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-template',
@@ -18,4 +18,8 @@ export class FormsTemplateComponent {
   };
 
   search = '';
+
+  onSubmitForm(form: NgForm) {
+    console.log(form.value);
+  }
 }
