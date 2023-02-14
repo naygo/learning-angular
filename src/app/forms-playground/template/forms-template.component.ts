@@ -21,5 +21,6 @@ export class FormsTemplateComponent {
 
   onSubmitForm(form: NgForm) {
     console.log(form.value);
+    form.reset();
   }
 }
